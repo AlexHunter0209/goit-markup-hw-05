@@ -7,8 +7,8 @@
     --accent-color: #E7E9FC;
     --subtle-text-color: #8E8F99;
 
-    --overlay-time: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    --overlay-animation: 250ms;
+    --swipe-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --low-animation: 250ms;
 }
 
 h1,
@@ -113,10 +113,6 @@ ul {
     color: var(--logo-color);
 }
 
-/* .header-list .header-item:not(:last-child) {
-    margin-right: 40px;
-} */
-
 .header .container {
     display: flex;
     align-items: center;
@@ -124,7 +120,6 @@ ul {
 }
 
 .header-link {
-    /* display: block; */
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -132,7 +127,7 @@ ul {
     text-decoration: none;
     padding-bottom: 24px;
     color: var(--title-text-color);
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .header-link:hover,
@@ -181,7 +176,7 @@ ul {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--primary-text-color);
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .header-email:hover,
@@ -246,7 +241,7 @@ h1 {
     border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .hero-button:hover,
@@ -423,7 +418,7 @@ h1 {
     justify-content: center;
     border-radius: 50%;
     background-color: var(--logo-color);
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .aside-soc-link:hover,
@@ -467,7 +462,6 @@ h1 {
     height: 88px;
     margin-right: 24px; 
     border-radius: 4px;
-    border: 1px solid var(--subtle-text-color);
 }
 
 .customers-item:last-child {
@@ -477,7 +471,7 @@ h1 {
 .customers-link {
     width: 104px;
     height: 56px;
-    display: block;
+    fill:currentColor;
 }
 
 .customers-logo {
@@ -487,9 +481,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color:  var(--subtle-text-color);
-    border:var(--subtle-text-color);
-    transition: var(--overlay-time); 
+    border: 1px solid var(--subtle-text-color);
+    color: var(--subtle-text-color);
+    transition: color var(--swipe-animation), 
+    border var(--swipe-animation); 
 }
 
 .customers-logo:hover,
@@ -498,9 +493,7 @@ h1 {
     border: 1px solid var(--logo-color);
 }
 
-.customers-link {
-    fill:currentColor;
-}
+
 
 /* ______ FOOTER ________  */
 
@@ -566,7 +559,7 @@ h1 {
     justify-content: center;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .footer-soc-link:hover{
@@ -629,7 +622,7 @@ h1 {
     color: var(--logo-color);
     box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 2px 1px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);    
     margin: 0;
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .btn:hover,
@@ -657,7 +650,7 @@ h1 {
     width: calc( (100% - 48px) / 3);
     margin-bottom: 48px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .benefits-list-item:not(:nth-child(3n)) {
@@ -672,7 +665,7 @@ h1 {
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     position: relative;
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .benefits-link:hover,
@@ -738,7 +731,7 @@ h1 {
 .benefits-list-item:hover .benefits-overlay-text,
 .benefits-list-item:focus .benefits-overlay-text {
     transform: translate(0 , 0);
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 
@@ -752,8 +745,8 @@ h1 {
     height: 100%;
     width: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    transition: visibility var(--overlay-time),
-                opacity var(--overlay-time);
+    transition: visibility var(--swipe-animation),
+                opacity var(--swipe-animation);
 }
 
 .backdrop.is-hidden {
@@ -792,7 +785,7 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    transition: var(--overlay-time);
+    transition: var(--swipe-animation);
 }
 
 .modal-btn:hover,
